@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { navigateTo } from "../../utils/routing";
 import { ORDER } from "../../constants/path";
 
-export default function Error() {
+export default function OrderError() {
   const navigate = useNavigate();
 
   useEffect(() => {

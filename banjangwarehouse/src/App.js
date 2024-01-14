@@ -3,7 +3,8 @@ import "./App.css";
 import Home from "./components/home/Home";
 import Order from "./components/order/Order";
 import Complete from "./components/complete/Complete";
-import Error from "./components/error/Error";
+import OrderError from "./components/error/OrderError";
+import NotFound from "./components/error/NotFound";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/order" element={<Order />} />
           <Route path="/complete" element={<Complete />} />
-          <Route path="/error" element={<Error />} />
+          <Route path="/error" element={<OrderError />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>

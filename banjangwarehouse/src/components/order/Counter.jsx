@@ -11,6 +11,11 @@ export default function Counter({ item }) {
       (selectedItem) => selectedItem.id === item.id,
     );
     if (itemIndex !== -1) {
+      if (selectedItems[itemIndex].quantity >= 999) {
+        alert("최대 수량은 999개 입니다 !");
+        return;
+      }
+
       const newSelectedItems = [...selectedItems];
       newSelectedItems[itemIndex] = {
         ...newSelectedItems[itemIndex],
@@ -50,7 +55,7 @@ export default function Counter({ item }) {
       <button className="commonText w-[19px]" onClick={decrement}>
         -
       </button>
-      <span className="commonText w-[19px]">{quantity}</span>
+      <span className="commonText text-center w-[30px]">{quantity}</span>
       <button className="commonText w-[19px]" onClick={increment}>
         +
       </button>

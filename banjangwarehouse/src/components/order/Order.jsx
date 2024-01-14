@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import useGetItems from "../../hooks/useGetItems";
 import useItemsStore from "../../stores/useItemsStore";
 import NavigationBar from "./NavigationBar";
@@ -6,7 +7,12 @@ import OrderFooter from "./OrderFooter";
 
 export default function Order() {
   const { isLoading } = useGetItems();
-  const { items } = useItemsStore();
+  const { items, resetSelectedItems } = useItemsStore();
+
+  useEffect(() => {
+    resetSelectedItems();
+  }, [resetSelectedItems]);
+
   return (
     <>
       <NavigationBar />

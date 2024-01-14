@@ -28,7 +28,7 @@ module.exports = {
             {},
         },
         ".eventPopup": {
-          "@apply text-[13px] bg-custom-orange leading-[18px] text-white p-1 rounded-[10px] tracking-[0.16px] font-roboto":
+          "@apply text-[13px] bg-custom-orange leading-[18px] text-white pb-[3px] p-1 rounded-[10px] tracking-[0.16px] font-roboto":
             {},
         },
         ".commonText": {

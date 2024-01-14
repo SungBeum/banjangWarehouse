@@ -11,6 +11,7 @@ const useGetItems = () => {
 
     const fetchAllItems = async () => {
       setIsLoading(true);
+
       const res = await getItems();
       if (isUnmounted) return;
       if (res) {

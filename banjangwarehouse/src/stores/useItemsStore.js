@@ -7,6 +7,7 @@ const useItemsStore = create((set) => ({
   setSelectedItems: (selectedItems) => {
     set({ selectedItems });
   },
+  resetSelectedItems: () => set({ selectedItems: [] }),
 }));
 
 export default useItemsStore;

@@ -5,14 +5,13 @@ import OrderBody from "./OrderBody";
 import OrderFooter from "./OrderFooter";
 
 export default function Order() {
-  useGetItems();
+  const { isLoading } = useGetItems();
   const { items } = useItemsStore();
-
   return (
     <>
       <NavigationBar />
-      <OrderBody />
-      <OrderFooter />
+      <OrderBody items={items} isLoading={isLoading} />
+      <OrderFooter isLoading={isLoading} />
     </>
   );
 }

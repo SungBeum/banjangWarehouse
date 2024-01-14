@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <div className="bg-black flex flex-col gap-10 justify-center">
-      <img src="/logoBig.svg" alt="logo" />
+      <img src="/logoBig.svg" alt="logoBig" />
       <button
         className="routingButton"
         onClick={() => navigateTo(navigate, ORDER)}
